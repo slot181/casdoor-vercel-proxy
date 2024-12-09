@@ -2,7 +2,7 @@
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "https://openweb-cf-proxy.slot10086.workers.dev/$1"
+      "dest": "http://182.44.1.58:8010/$1"
     }
   ]
 }
