@@ -1,8 +1,8 @@
 {
-  "rewrites": [
+  "routes": [
     {
-      "source": "/(.*)",
-      "destination": "http://182.44.1.58:4000/$1"
+      "src": "/(.*)",
+      "dest": "https://openweb-cf-proxy.slot10086.workers.dev/$1"
     }
   ]
 }
