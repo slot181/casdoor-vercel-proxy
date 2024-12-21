@@ -1,8 +1,30 @@
 {
-  "routes": [
+  "rewrites": [
     {
-      "src": "/(.*)",
-      "dest": "http://182.44.1.58:5556/$1"
+      "source": "/api/:path*",
+      "destination": "http://182.44.1.58:5556/api/:path*"
+    },
+    {
+      "source": "/login/:path*",
+      "destination": "http://182.44.1.58:5556/login/:path*"
+    },
+    {
+      "source": "/signup/:path*",
+      "destination": "http://182.44.1.58:5556/signup/:path*"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "http://182.44.1.58:5556/$1"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        { "key": "Access-Control-Allow-Origin", "value": "*" },
+        { "key": "Access-Control-Allow-Methods", "value": "GET, POST, PUT, DELETE, OPTIONS" },
+        { "key": "Access-Control-Allow-Headers", "value": "Content-Type, Authorization" }
+      ]
     }
   ]
 }
